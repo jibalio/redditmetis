@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}
+    FAQs - RedditMetis
+{% endblock %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7 col-12 col-lg-7 offset-md-1">
+                <h1>Frequently Asked Questions</h1>
+                <p class="caption">
+                        Last Updated June 28, 2020<br />
+                    </p>
+
+                    <br/>
+                <p>If you did not find the question you were looking for here, throw <a href="https://reddit.com/user/consulnappy">u/consulnappy</a> a private message on Reddit, and along with a response, the question may be added to this page.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Does RedditMetis remember your data permanently?</h2>
+                <p>
+                    No. RedditMetis does not store any of your comment information. It only stores the result for a few hours to prevent spamming of requests.
+                </p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>How do I delete my data here?</h2>
+                <p>
+                    Delete your comments on Reddit so that RedditMetis would not be able to see them. Be sure to wait a couple of hours before refreshing though, because RedditMetis remembers the most recent results of a profile scan for a couple of hours before forgetting them.
+                </p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Are usernames case-sensitive?</h2>
+                <p>No. Casing does not matter.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Why does my searching my username say "User not found"?</h2>
+                <p>First thing to check would be the spelling of the username. Make sure you did not prepend the u/- prefix on usernames. If it still doesn't work, you may have been shadowbanned from Reddit.</p>
+                <p>If the issue persists when searching for any user, there might be plugins/content blockers that prevents RedditMetis from reaching Reddit.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Why aren't my new comments reflecting on RedditMetis?</h2>
+                <p>As an anti-spam measure, user queries are cached for a (hidden) amount of hours. So you have to wait a couple of hours before RedditMetis starts processing your new comments again.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Why is retrieving the submissions and comments slow?</h2>
+                <p>To prevent server timeouts and overload, the retrieving of submissions and comments have been made client-side. It is your machine that connects to the Reddit API. Thus, the speed of data gathering is dependent on your network speed. In addition, the Reddit API rules state that no more than 30 requests per minute should be made, thus RedditMetis cannot retrieve all the data at once.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Why is it called RedditMetis?</h2>
+                <p><a href="https://en.wikipedia.org/wiki/Metis_(mythology)">Metis</a>, in ancient Greek religion, was a mythical Titaness which, by the 5th century BC, was regarded as the mother of wisdom and deep thought. You can probably see how this matches RedditMetis' data scraping capability. Coincidentally, <a href="https://en.wikipedia.org/wiki/9_Metis">Metis</a> is the name of an asteroid first observed in 1848.</p>
+            </div>
+
+            
+
+
+
+        </div>
+    </div>
+
+
+    {% include 'footer.html'%}
+{% endblock %}

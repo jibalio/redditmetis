@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title %}
+RedditMetis - Reddit User Profile Analysis
+{% endblock %}
+
+
+{% block head_extra %}
+
+<meta name="description" content="RedditMetis is a Reddit user analysis tool. Analyze and see the summary and statistics for your Reddit account, including top posts and user activity, top words, and other statistics." />
+
+{% endblock %}
+
+{% block content %}
+
+    <script>
+        $(document).ready(function() {
+            document.getElementById("search-button_index").onclick = function () {
+                var u = $("#input_username_index").val()
+                if (u) {
+                    location.href = "/user/"+u;
+                }
+            };
+            $("#input_username_index").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    $("#search-button_index").click();
+                }
+            })
+            $("#navsearch").hide();
+        })
+    </script>
+    
+
+
+    {% include 'navbar.html' %}
+    <div class="container-fluid">
+      
+        
+        <div class="row d-flex justify-content-center align-items-center" style="background-image: linear-gradient(160deg, #89c9e8 0%, #77e6a1 100%);padding:5%">
+            
+            <div class="col-md-5 col-12" style="padding-right:50px">
+                <div class="row">
+                    <div class="col-md-7 col-12">
+                        <h1 style="color:white;font-size:5.5vh;font-weight:400" class="small-caps-lower">See statistics for your Reddit account</h1>
+                    </div>
+                    <div class="col-md-12 col-12">
+                        <p class="color-white">Enter your username below to see your Reddit Statistics - recent activity, comment and submissions summaries, word cloud, and more interesting stats. Data is generated from the last 1000 comments and submissions.</p>
+                    </div>
+                   
+                    <div class="col-md-12 col-12 d-flex justify-content-center mt-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text round-edge-left" id="basic-addon3">u/</span>
+                        </div>
+                        <input type="text" class="form-control round-edge-right" id="input_username_index" aria-describedby="basic-addon3">
+                    </div> 
+                    <div class="col-md-12 col-12 d-flex justify-content-center mt-2">
+                        <button id="search-button_index" type="button" class="btn btn-info" onclick="search_username()" style="width:100%">Analyze</button>
+                    </div>
+                     <div class="col-12 mt-3">
+                        <a href="#" onClick="get_random_user()"><p id="rando" style="
+                                        color: white;
+                                        text-decoration: dotted;
+                                        text-decoration-line: underline;">
+                            See a random Redditor's profile instead 
+                        </p></a>
+                    </div>  
+                </div>
+            </div>
+           
+
+
+
+            <div class="col-md-3 col-12 mt-3 round-edge shadow-lg p-3 mb-5 bg-white rounded" style="background-color:white;">
+                <div class="row">
+                    <div class="col-3  mb-2">
+                        <img src="rmstatic/coffee.png" style="width:100%;max-width:50px;max-height:50px;"/>
+                    </div>
+                    <div class="col-8">
+                        <p>Like this tool? Consider buying me a cup of coffee! Your donation will help pay for server time and database costs. <a href="/donate">Learn more</a></p>  
+                    </div>
+                    <div class="col-12 d-flex justify-content-center mt-2">
+                        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support RedditMetis on Ko-fi', '#46b798', 'I2I610RIP');kofiwidget2.draw();</script> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+        <div class="row d-flex mt-3">
+            <div class="col-md-7 col-12 offset-md-2">
+                <h2>RedditMetis - A Reddit User Analysis Site</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-7 col-12 offset-md-2">
+                <p>RedditMetis gets the list of the last 1000 comments and 1000 submissions of a Reddit account and visually shows user statistics. The site also infers a Reddit profile's attributes and possessions (e.g. people in your family, gender, places you've live(d) in, etc) by individually reading comments and submissions using natural language processing techniques. </p>
+            </div>
+        </div>
+       
+       <div class="row d-flex mt-3">
+            <div class="col-md-7 col-12 offset-md-2">
+                <h2>Join the RedditMetis community</h2>
+            </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-7 col-12 offset-md-2">
+                <p>Found a bug? Want to request a feature? Or just want to give feedback? Join the discussion at the <a href="https://reddit.com/r/RedditMetis">RedditMetis subreddit</a>. </p>
+            </div>
+        </div>
+    <div class="row d-flex justify-content-start  mt-3">
+            <div class="col-md-7 col-12 offset-md-2">
+                <div class="alert alert-warning" role="alert">
+                    <p><b>Disclaimer:</b> All data analyzed is public. RedditMetis is not affiliated with Reddit and cannot access your private Reddit data such as your password, subreddit subscriptions, up/downvotes and private subreddit activity. You can also contact me through a private message at Reddit: <a href="https://reddit.com/user/consulnappy">u/consulnappy</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+
+{% endblock %}

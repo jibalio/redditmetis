@@ -1,0 +1,58 @@
+ <script>
+function redirectrandom(response) {
+    var uname = response.data.children[0].data.author;
+    location.href=`/user/${uname}`;
+}
+function get_random_user() {
+    $("#rando").html("Please wait...")
+    var url = `https://reddit.com/r/random.json?limit=1&jsonp=redirectrandom`;
+    $.ajax(url, {
+        type:"GET",
+        dataType:"jsonp",
+        crossDomain:true,
+    });
+}
+
+        $(document).ready(function() {
+            $("#input_username").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    var u = $("#input_username").val()
+                    if (u) {
+                        location.href = "/user/"+u;
+                    }
+                }
+            })
+        })
+ </script>
+ <nav class="navbar navbar-expand-md navbar-light">
+                <a href="/" class="disable-link-underline"><div><p class="metis-brand"><span style="color:#a5a5a5">Reddit</span><span>Metis</span></p></div></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item ml-1">
+        <p><a class="nav-link" href="/">Home</a></p>
+      </li>
+      <li class="nav-item">
+        <p><a class="nav-link ml-1" href="/about">About</a></p>
+      </li>
+      <li class="nav-item ml-1">
+        <p><a class="nav-link" href="/faq">FAQ</a></p>
+      </li>
+      <li class="nav-item ml-1">
+        <p><a class="nav-link" href="/donate">Donate</a></p>
+      </li>
+      <li class="nav-item ml-1">
+        <p><a class="nav-link" href="https://reddit.com/r/RedditMetis">r/RedditMetis on Reddit</a></p>
+      </li>
+    </ul>
+    <!-- 
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    -->
+  </div>
+</nav>

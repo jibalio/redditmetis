@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Page not found - RedditMetis
+{% endblock %}
+
+
+
+{% block content %}
+
+    <script>
+        $(document).ready(function() {
+            document.getElementById("search-button").onclick = function () {
+                var u = $("#search-user").val()
+                if (u) {
+                    location.href = "/user/"+u;
+                }
+            };
+            $("#search-user").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    $("#search-button").click();
+                }
+            });
+        })
+    </script>
+
+
+    {% include 'navbar.html' %}
+
+    <div class="row ml-3 mr-3 mt-5 d-flex justify-content-center">
+        <p class="metis-brand">woops! that page does not exist!</p>
+    </div>
+    
+
+{% endblock %}

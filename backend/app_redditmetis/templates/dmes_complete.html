@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Thank you! - RedditMetis
+{% endblock %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7 col-12 offset-md-1">
+                <h1>Thank you for donating!</h1>
+                <p>Thank you for your interest in keeping the site alive! You are helping me keeping my pockets from burning.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Don't forget</h2>
+                <p>The donation counter is still being updated manually (for now). Please PM me on Reddit (u/consulnappy) and tell me your donated amount so I can update the donation bar, and I can put you on my donors page.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    {% include 'footer.html'%}
+{% endblock %}

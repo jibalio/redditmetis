@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Help on Content Blocking - RedditMetis
+{% endblock %}
+
+{% block content %}
+
+    {% include 'navbar.html' %}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-7 col-12 offset-md-1">
+                <h1>Why is RedditMetis blocked?</h1>
+                <p></p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Stack</h2>
+                <p>Natural language processing using Python <a href="https://www.nltk.org/">NLTK</a> and <a href="https://textblob.readthedocs.io/en/dev/">TextBlob</a>.</p>
+                <p>Data Visualization using <a href="https://d3js.org/">D3.js</a> and <a href="https://apexcharts.com/">ApexCharts.js</a></p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Credits</h2>
+                <p>Special thanks to <a href="https://reddit.com/user/orionmelt">u/orionmelt</a> for making his code open-source and accessible by the public.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <h2>Cookie policy</h2>
+                <p>You can view the cookie policy of RedditMetis <a href="/cookies">here</a>.</p>
+            </div>
+
+            <div class="col-md-7 col-12 mt-3 offset-md-1">
+                <p class="alert alert-warning">Disclaimer: All data analyzed is public. This website is not affiliated with Reddit and cannot access your private reddit data such as your password, subreddit subscriptions, up/downvotes and private subreddit activity.</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    {% include 'footer.html'%}
+{% endblock %}

@@ -1,0 +1,48 @@
+<script>
+    $(document).ready(function() {
+        document.getElementById("search-button").onclick = function () {
+            username = $("#input_username").val()
+            var valid = /^[A-Za-z0-9_-]+$/.test(username);
+            if (!valid){
+                app.error = MetisError.InvalidUserError;
+                app.status = -1;
+                return;
+            }
+            var u = username
+            if (u) {
+                location.href = `/user/${u}`;
+            }
+        };
+        $("#input_username").keyup(function(event) {
+            if (event.keyCode === 13) {
+                $("#search-button").click();
+            }
+        });
+    })
+</script>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="/" class="disable-link-underline"><div><p class="metis-brand">Redditmetis <span class="badge badge-warning" style="font-size: 0.5em;">ALPHA</span></p></div></a>
+            </div>
+            <div class="col-12 d-flex justify-content-center mt-2">
+                <p>Get a Reddit User's statistics</p>
+                
+            </div>
+            <div class="col-md-4 d-flex justify-content-center mt-2 col-12">
+                <div class="input-group-prepend">
+                    <span class="input-group-text round-edge-left" id="basic-addon3">u/</span>
+                </div>
+                <input type="text" class="form-control round-edge-right" id="input_username" aria-describedby="basic-addon3">
+                <button id="search-button" type="button" class="btn btn-info ml-2" onclick="search_username()">Analyze</span></button>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center mt-4 col-12">
+                <div>
+                    <p id="exception-alert" class="error-text"></p>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>

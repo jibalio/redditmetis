@@ -1,0 +1,462 @@
+html {
+    scroll-behavior: smooth;
+}
+  
+.round-edge-left {
+    border-radius:0.3em 0em 0em 0.3em;
+}
+.round-edge-right {
+    border-radius:0em 0.3em 0.3em 0em;
+}
+.round-edge-top {
+    border-radius:0.3em 0.3em 0em 0em;
+}
+.round-edge-bottom {
+    border-radius:0em 0em 0.3em 0.3em;
+}
+.round-edge {
+    border-radius:0.3em;
+}
+
+
+.bg-gradient {
+    color:#22655a;
+    background-image: linear-gradient(120deg,#86f2be 0,#8ddae7 100%);
+}
+
+.color-white {
+    color: white;
+}
+
+.bg-green {
+    background-color: #00e396;
+}
+
+.bg-blue {
+    background-color: #008ffb;
+}
+
+.no-border {
+    border:none;
+}
+
+
+.space-left {
+    margin: 0px 5px;
+}
+.subheader{
+    color: #58bfab;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+h2 {
+    font-family:'Nunito',sans-serif;
+    color: #58bfab;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+.small-caps-lower {
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+.caption {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+
+
+
+.metis-bg-primary {
+    background-color:#00b894    ;
+}
+
+a.navbar-brand {
+    font-family: "Nunito", Arial, Helvetica, sans-serif
+}
+
+h1 {
+    font-family: 'Nunito', Tahoma, Geneva, Verdana, sans-serif;
+    color: #58bfab;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-variant: small-caps;
+    text-transform: lowercase;
+}
+
+body {
+   background-color:#f7f7f7;
+}
+
+.cookie-alert {
+    background:black;
+}
+
+h1 .badge {
+    font-size: 40%;
+    vertical-align: middle;
+}
+
+p {
+    font-family: 'Nunito', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:0.9rem;
+    color:#353535;
+    margin: 0 0 0 0;
+}
+
+#loading-spinner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:73px;
+    height:73px;
+}
+
+
+.btn-container {
+    white-space: normal!important;
+}
+
+.metis-brand {
+    font-family: 'Nunito', Geneva, sans-serif;
+    font-size: 20px;
+    letter-spacing: 6px;
+    word-spacing: 4px;
+    color: #00b894;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+}
+
+.disable-link-underline:hover{
+    text-decoration: none;
+}
+
+.input-group-text {
+    background-color:#5ec8b3;
+    color:white;
+    border:none;
+}
+
+.spinner-border {
+    width:75px;height:75px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    border: .08em solid #00b894;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: spinner-border .75s linear infinite;
+}
+
+
+.spinner-border-sm {
+    width:24px;height:24px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    border: .08em solid #00b894;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: spinner-border .75s linear infinite;
+}
+
+
+.btn-info {
+    color: white!important;
+    border-color: #00b894!important;
+    background-color: #5ec8b3!important;
+}
+
+.btn-info:hover {
+    color: white!important;
+    border-color: #00b894!important;
+    background-color: #52d0b7!important;
+}
+
+
+.navbar-search {
+    border: 1px solid #00b894;
+}
+
+p.label {
+    font-size: 20px;
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    color: #00B894;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+} 
+
+
+.mpanel {
+    margin:10px 10px 10px 10px;
+    background-color: white;
+    padding-bottom:15px;
+    border: 1px solid gainsboro;
+}
+
+.mpanel p {
+    margin-top:3px;
+    margin-bottom:3px;
+}
+
+.navbar {
+    background-color: #e9ecef;
+}
+
+jumbotron {
+}
+.overlay {
+    position: absolute; /* Sit on top of the page content */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.719); /* Black background with opacity */
+    z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+.mpanel-header {
+    background-color:#f5f5f5;;
+    /*padding:5px 5px 5px 5px;*/
+    border-radius: 0.3em;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #89e8ce;
+    background-color: #88eacc;
+}
+.info-tooltip {
+    font-size:1rem;
+}
+
+
+
+.mpanel-header p {
+    color: #797979;
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+
+
+.sublabel {
+    color: #797979;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+.float-left {
+    position:relative;
+    float:left;
+}
+
+.float-right {
+    position:relative;
+    float:right;
+}
+
+
+.mpanelsubtitles p {
+    color:#989898;
+    font-size: 0.8em;
+}
+.btn-outline-purple {
+    color: #ad35dc;
+    border-color: #ad35dc;
+}
+.subtitle {
+    color:#989898;
+    font-size: 0.8em;
+}
+.upvoted {
+    color:#ff7675;
+}
+
+.downvoted {
+    color:#0984e3;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 38%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.svg-content-no-padding {
+    display: inline-block;
+    position: absolute;
+}
+
+.form-control-sm {
+    height: calc(1.3em + .5rem + 2px);
+    padding: .25rem .5rem;
+    font-size: .75rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+
+.statistic-container {
+    padding:0.5vw;
+}
+
+.statistic-card {
+    background-color:aqua;
+}
+
+.stat-num {
+    font-size:1.6rem;
+    font-weight:300;
+    color:#545454;
+}
+
+#freq-table p {
+    text-align: center;
+}
+
+.num-list {
+    padding: 10px 20px 10px 30px;
+}
+
+.guess {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    color: black;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+    margin-left: 2px;
+}
+
+.top-n-list p {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.gradient-number {
+    background-color: #86f2be;
+    padding: 5px 13px;
+    border-radius: 5px;
+    font-size: 0.65rem;
+}
+
+.gradient-number-1 {
+    background-color: #8ddae7;
+    padding: 5px 13px;
+    border-radius: 5px;
+    font-size: 0.65rem;
+}
+
+
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #212121;
+    background-color: #FAFAFA;
+    border-color: #EEEEEE;
+}
+
+.panel-title {
+    font-size: 14px;
+}
+
+.panel-title > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+}
+
+
+.fullwidth {
+    width:100%;
+}
+
+a {
+    color:#00B894;
+}
+
+a:hover {
+    color:#5ec8b3;
+}
+
+.gray-container {
+    background-color: #f7f7f7;
+    padding: 0.5rem;
+}
+
+.gray-container-no-round {
+    background-color: #f7f7f7;
+}
+
+.error-text {
+    padding: 5px;
+    color: #ff1b1b;
+}
+
+[v-cloak] {
+    display:none;
+  }
+
+
+  /*Overwrites*/
+.navbar-toggler {
+    padding: .15rem .5rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    /* vertical-align: middle; */
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
